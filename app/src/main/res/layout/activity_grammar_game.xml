@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GrammarGameActivity">
+
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Home Button"
+        android:src="@drawable/ic_home"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_desc"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="75dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/home_button"
+        app:layout_constraintEnd_toStartOf="@id/grammar_game_title"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_desc"/>
+    
+    <TextView
+        android:id="@+id/grammar_game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grammar Attack!"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_desc"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_desc"/>
+
+    <TextView
+        android:id="@+id/grammar_game_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Put the sentence in the correct order!"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_card1"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card1"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/grammar_card2"
+        app:layout_constraintBottom_toTopOf="@id/grammar_card5">
+
+        <TextView
+            android:id="@+id/grammar_card1_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="rain"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card2"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_desc"
+        app:layout_constraintStart_toEndOf="@id/grammar_card1"
+        app:layout_constraintEnd_toStartOf="@id/grammar_card3"
+        app:layout_constraintBottom_toTopOf="@id/grammar_card6">
+
+        <TextView
+            android:id="@+id/grammar_card2_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Do"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card3"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_desc"
+        app:layout_constraintStart_toEndOf="@id/grammar_card2"
+        app:layout_constraintEnd_toStartOf="@id/grammar_card4"
+        app:layout_constraintBottom_toTopOf="@id/grammar_card6" >
+
+        <TextView
+            android:id="@+id/grammar_card3_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="will"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card4"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_desc"
+        app:layout_constraintStart_toEndOf="@id/grammar_card3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_card7">
+
+        <TextView
+            android:id="@+id/grammar_card4_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="think"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card5"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_card1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/grammar_card6"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_answer" >
+
+        <TextView
+            android:id="@+id/grammar_card5_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="it"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card6"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_card2"
+        app:layout_constraintStart_toEndOf="@id/grammar_card5"
+        app:layout_constraintEnd_toStartOf="@id/grammar_card7"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_answer" >
+
+        <TextView
+            android:id="@+id/grammar_card6_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="today?"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_card7"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_card4"
+        app:layout_constraintStart_toEndOf="@id/grammar_card6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_answer">
+
+        <TextView
+            android:id="@+id/grammar_card7_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="you"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="28sp"/>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/grammar_game_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Answer:"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/grammar_card5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/grammar_game_answer_box"
+        android:layout_gravity="center"
+        android:layout_width="900dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="4dp"
+        android:background="#DEDEDE"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grammar_game_answer_button">
+
+       <EditText
+           android:id="@+id/answer_box_edittext"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/grammar_game_answer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="20dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/grammar_game_answer_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

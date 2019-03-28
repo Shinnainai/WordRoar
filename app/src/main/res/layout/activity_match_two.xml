@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchTwoActivity">
+
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Home Button"
+        android:src="@drawable/ic_home"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/word_match_desc"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="75dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/home_button"
+        app:layout_constraintEnd_toStartOf="@id/word_match_title"
+        app:layout_constraintBottom_toTopOf="@id/word_match_desc"/>
+
+    <TextView
+        android:id="@+id/word_match_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match Two!"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/word_match_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find the matching pairs"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/word_match_title"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card3"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card1"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/word_match_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card2"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card6">
+
+        <ImageView
+            android:id="@+id/match_two_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/island"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Island"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card2"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/word_match_desc"
+        app:layout_constraintStart_toEndOf="@id/match_two_card1"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card3"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card7">
+
+        <ImageView
+            android:id="@+id/match_two_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Music"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card3"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/word_match_desc"
+        app:layout_constraintStart_toEndOf="@id/match_two_card2"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card4"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card8">
+
+        <ImageView
+            android:id="@+id/match_two_img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/elephant"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Elephant"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card4"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/word_match_desc"
+        app:layout_constraintStart_toEndOf="@id/match_two_card3"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card5"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card9">
+
+        <ImageView
+            android:id="@+id/match_two_img4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/island"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Island"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card5"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/word_match_desc"
+        app:layout_constraintStart_toEndOf="@id/match_two_card4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/match_two_card10">
+
+        <ImageView
+            android:id="@+id/match_two_img5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scissors"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/match_two_tv5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Scissors"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card6"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/match_two_card1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card7"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/match_two_img6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hospital"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hospital"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card7"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/match_two_card2"
+        app:layout_constraintStart_toEndOf="@id/match_two_card6"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card8"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/match_two_img7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scissors"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Scissors"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card8"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/match_two_card2"
+        app:layout_constraintStart_toEndOf="@id/match_two_card7"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card9"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/match_two_img8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/elephant"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Elephant"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card9"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/match_two_card3"
+        app:layout_constraintStart_toEndOf="@id/match_two_card8"
+        app:layout_constraintEnd_toStartOf="@id/match_two_card10"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/match_two_img9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Music"
+            android:visibility="gone"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/match_two_card10"
+        android:layout_gravity="center"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/match_two_card4"
+        app:layout_constraintStart_toEndOf="@id/match_two_card9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/match_two_img10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hospital"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/match_two_tv10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hospital"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
