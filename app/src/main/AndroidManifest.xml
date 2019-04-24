@@ -20,7 +20,8 @@
         <activity android:name=".GrammarGameActivity" />
         <activity android:name=".MatchCardsActivity" />
         <activity android:name=".ContextGameActivity" />
-        <activity android:name=".TimerGameActivity"></activity>
+        <activity android:name=".TimerGameActivity" />
+        <activity android:name=".SuccessActivity"></activity>
     </application>
 
 </manifest>
