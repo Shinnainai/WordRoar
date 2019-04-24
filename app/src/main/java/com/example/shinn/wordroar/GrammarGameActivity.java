@@ -16,8 +16,6 @@ public class GrammarGameActivity extends AppCompatActivity {
 
         ImageButton homeBtn = findViewById(R.id.home_button);
         homeBtn.setOnClickListener((view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
             finish();
         });
 
@@ -33,5 +31,6 @@ public class GrammarGameActivity extends AppCompatActivity {
     private void displaySuccessPage() {
         Intent intent = new Intent(this, SuccessActivity.class);
         startActivity(intent);
+        finish();
     }
 }

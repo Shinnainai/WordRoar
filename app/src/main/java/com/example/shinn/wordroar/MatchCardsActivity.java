@@ -1,8 +1,7 @@
 package com.example.shinn.wordroar;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 
 public class MatchCardsActivity extends AppCompatActivity {
@@ -14,8 +13,7 @@ public class MatchCardsActivity extends AppCompatActivity {
 
         ImageButton homeBtn = findViewById(R.id.home_button);
         homeBtn.setOnClickListener((view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            finish();
         });
     }
 }

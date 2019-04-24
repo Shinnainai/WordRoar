@@ -1,19 +1,15 @@
 package com.example.shinn.wordroar;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class MatchTwoActivity extends AppCompatActivity {
 
@@ -49,8 +45,7 @@ public class MatchTwoActivity extends AppCompatActivity {
 
         ImageButton homeBtn = findViewById(R.id.home_button);
         homeBtn.setOnClickListener((view) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            finish();
         });
 
         card1.setOnClickListener(view -> {
