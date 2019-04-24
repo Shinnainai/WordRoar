@@ -44,7 +44,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         app:layout_constraintEnd_toStartOf="@id/main_settings_btn"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toEndOf="@id/main_lion_img"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/points_layout"/>
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -71,12 +72,29 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="#D8ECF3" />
 
     <LinearLayout
+        android:id="@+id/points_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/main_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/match_two_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Total Points: 100"
+            android:textAlignment="center"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/match_two_layout"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:orientation="vertical"
         android:background="#DEDEDE"
-        app:layout_constraintTop_toBottomOf="@id/main_title"
+        app:layout_constraintTop_toBottomOf="@id/points_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/match_cards_layout"
         app:layout_constraintBottom_toTopOf="@id/grammar_game_layout">
@@ -86,7 +104,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:src="@drawable/main_match_two_img"/>
+            android:src="@drawable/main_match_two_img"
+            android:contentDescription="Match Two Game" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,17 +114,18 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="200dp"
         android:orientation="vertical"
         android:background="#DEDEDE"
-        app:layout_constraintTop_toBottomOf="@id/main_title"
+        app:layout_constraintTop_toBottomOf="@id/points_layout"
         app:layout_constraintStart_toEndOf="@id/match_two_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/timer_game_layout">
+        app:layout_constraintBottom_toTopOf="@id/context_game_layout">
 
         <ImageButton
             android:id="@+id/match_cards_img"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:src="@drawable/main_match_words_img"/>
+            android:src="@drawable/main_match_words_img"
+            android:contentDescription="Match Words Game" />
     </LinearLayout>
 
     <LinearLayout
@@ -124,7 +144,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:src="@drawable/main_grammar_attack_img"/>
+            android:src="@drawable/main_grammar_attack_img"
+            android:contentDescription="Grammar Attack Game" />
     </LinearLayout>
 
     <LinearLayout
@@ -135,7 +156,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="#DEDEDE"
         app:layout_constraintTop_toBottomOf="@id/match_cards_layout"
         app:layout_constraintStart_toEndOf="@id/grammar_game_layout"
-        app:layout_constraintEnd_toStartOf="@id/timer_game_layout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
@@ -143,7 +164,8 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:src="@drawable/main_context_game_img"/>
+            android:src="@drawable/main_context_game_img"
+            android:contentDescription="Context Finder Game" />
     </LinearLayout>
 
     <LinearLayout
@@ -155,14 +177,16 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         app:layout_constraintTop_toBottomOf="@id/match_cards_layout"
         app:layout_constraintStart_toEndOf="@id/context_game_layout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone">
 
         <ImageButton
             android:id="@+id/timer_game_img"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:src="@drawable/main_time_trial_img"/>
+            android:src="@drawable/main_time_trial_img"
+            android:contentDescription="Time Trial" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
