@@ -77,7 +77,7 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/card1tv"
+                android:id="@+id/match_cards_tv1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Crab"
@@ -110,7 +110,7 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/card2tv"
+                android:id="@+id/match_cards_tv2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Ball"
@@ -146,7 +146,7 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:id="@+id/card3tv"
+                android:id="@+id/match_cards_tv3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Strawberry"
