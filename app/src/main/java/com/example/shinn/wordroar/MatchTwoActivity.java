@@ -1,5 +1,6 @@
 package com.example.shinn.wordroar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -35,6 +36,7 @@ public class MatchTwoActivity extends AppCompatActivity {
     List<String> selectedImagesNames = new ArrayList<>();
     final boolean[] isMatch = {false};
     final int[] numbFlipped = {0};
+    int totalFlipped = 0;
     List<String> clicked = new ArrayList<>();
 
     @Override
@@ -106,6 +108,37 @@ public class MatchTwoActivity extends AppCompatActivity {
         super.onStart();
     }
 
+    private void checkForReflip(TextView card_tv) {
+        if(numbFlipped[0] == 2 && isMatch[0]) {
+            numbFlipped[0] = 0;
+            clicked.remove(0);
+            clicked.remove(0);
+            isMatch[0] = false;
+        } else if(numbFlipped[0] == 2 && !isMatch[0]){
+            resetAllViews();
+            clicked.remove(0);
+            clicked.remove(0);
+            numbFlipped[0] = 0;
+            totalFlipped = totalFlipped - 2;
+        } else if(numbFlipped[0] == 1) {
+            if(clicked.get(0).equalsIgnoreCase((String)card_tv.getText())) {
+                isMatch[0] = true;
+            }
+        }
+        clicked.add((String) card_tv.getText());
+        numbFlipped[0] += 1;
+        totalFlipped += 1;
+        if(totalFlipped == 10) {
+            displaySuccessPage();
+        }
+    }
+
+    private void displaySuccessPage() {
+        Intent intent = new Intent(this, SuccessActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void setViews() {
         card1 = findViewById(R.id.match_two_card1);
         card1_img =  findViewById(R.id.match_two_img1);
@@ -137,26 +170,6 @@ public class MatchTwoActivity extends AppCompatActivity {
         card10 = findViewById(R.id.match_two_card10);
         card10_img = findViewById(R.id.match_two_img10);
         card10_tv = findViewById(R.id.match_two_tv10);
-    }
-
-    private void checkForReflip(TextView card_tv) {
-        if(numbFlipped[0] == 2 && isMatch[0]) {
-            numbFlipped[0] = 0;
-            clicked.remove(0);
-            clicked.remove(0);
-            isMatch[0] = false;
-        } else if(numbFlipped[0] == 2 && !isMatch[0]){
-            resetAllViews();
-            clicked.remove(0);
-            clicked.remove(0);
-            numbFlipped[0] = 0;
-        } else if(numbFlipped[0] == 1) {
-            if(clicked.get(0).equalsIgnoreCase((String) card_tv.getText())) {
-                isMatch[0] = true;
-            }
-        }
-        clicked.add((String) card_tv.getText());
-        numbFlipped[0] += 1;
     }
 
     private void resetAllViews() {
