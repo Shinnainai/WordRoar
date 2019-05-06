@@ -1,16 +1,38 @@
 package com.example.shinn.wordroar;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private SharedPreferences sharedPref;
+    private int highScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        sharedPref = this.getPreferences(MODE_PRIVATE);
+        SharedPreferences.OnSharedPreferenceChangeListener sharedPrefChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            @Override
+            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+                highScore = sharedPref.getInt(getString(R.string.saved_high_score_key), 0);
+                TextView scoreTV = findViewById(R.id.main_activity_score);
+                scoreTV.setText("Total Points: " + Integer.toString(highScore));
+            }
+        };
+        sharedPref.registerOnSharedPreferenceChangeListener(sharedPrefChangeListener);
+
+        // On start app set score to 0
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.saved_high_score_key), 0);
+        editor.apply();
 
         ImageButton matchTwoBtn = findViewById(R.id.match_two_img);
         matchTwoBtn.setOnClickListener((view) -> {
