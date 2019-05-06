@@ -41,35 +41,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:text="Word Roar"
         android:textSize="52sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/main_settings_btn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toEndOf="@id/main_lion_img"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/points_layout"/>
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
-        app:layout_constraintGuide_end="100dp"
-        android:orientation="vertical"
-        app:layout_constraintWidth_percent=".95"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/main_settings_btn"
-        app:layout_constraintStart_toEndOf="@id/main_title"
-        app:layout_constraintBottom_toTopOf="@id/match_cards_layout"/>
-
-    <ImageButton
-        android:id="@+id/main_settings_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Settings Button"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/ic_settings"
-        android:background="#D8ECF3" />
 
     <LinearLayout
         android:id="@+id/points_layout"
@@ -81,6 +57,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         app:layout_constraintBottom_toTopOf="@id/match_two_layout">
 
         <TextView
+            android:id="@+id/main_activity_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Total Points: 100"
